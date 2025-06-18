@@ -16,7 +16,7 @@ Un elegante web component que crea efectos de texto "scramble" o "matriz" con co
 ## 🚀 Instalación
 
 ```bash
-npm install scramble-text-component
+npm install text-scramble
 ```
 
 ## 📖 Uso Básico
@@ -25,10 +25,10 @@ npm install scramble-text-component
 
 ```javascript
 // ES6 Module
-import 'scramble-text-component';
+import 'text-scramble';
 
 // CommonJS
-require('scramble-text-component');
+require('text-scramble');
 ```
 
 ### HTML
@@ -268,10 +268,6 @@ element.setAttribute('characters', '★☆♦♠♣♥');
     }
 }
 ```
-
-## 🎪 Demo en Vivo
-
-Visita [https://scramble-text-demo.com](https://scramble-text-demo.com) para ver ejemplos interactivos.
 
 ## 📋 Changelog
 
