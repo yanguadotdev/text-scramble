@@ -1,0 +1,163 @@
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scramble Text - Ejemplos</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto Mono', monospace;
+            padding: 2rem;
+            background: #222;
+            line-height: 1.6;
+            color: #f9f9f9;
+        }
+        
+        .example-section {
+            margin: 2rem 0;
+            padding: 1rem;
+            border: 1px solid #333;
+            border-radius: 8px;
+        }
+        
+        .example-title {
+            font-family: 'Bebas Neue', sans-serif;
+            color: #ff7120;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        scramble-text {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            margin: 0.5rem;
+            border: 1px solid #333;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        scramble-text:hover {
+            background: rgba(0, 255, 0, 0.1);
+        }
+
+        .large-text {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .code-example {
+            background: #1a1a1a;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+            color: #ccc;
+            border: 1px solid rgba(255, 255, 255, .15);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="example-section">
+        <div class="example-title">1. Trigger: Hover (por defecto)</div>
+        <scramble-text>Pasa el mouse por aquí</scramble-text>
+        <div class="code-example">
+            &lt;scramble-text&gt;Pasa el mouse por aquí&lt;/scramble-text&gt;
+        </div>
+    </div>
+
+    <div class="example-section">
+        <div class="example-title">2. Trigger: Click</div>
+        <scramble-text trigger="click">Haz click en mí</scramble-text>
+        <div class="code-example">
+            &lt;scramble-text trigger="click"&gt;Haz click en mí&lt;/scramble-text&gt;
+        </div>
+    </div>
+
+    <div class="example-section">
+        <div class="example-title">3. Trigger: Viewport (se activa al entrar en vista)</div>
+        <scramble-text trigger="viewport">Aparezco cuando me ves</scramble-text>
+        <div class="code-example">
+            &lt;scramble-text trigger="viewport"&gt;Aparezco cuando me ves&lt;/scramble-text&gt;
+        </div>
+    </div>
+
+    <div class="example-section">
+        <div class="example-title">4. Múltiples triggers</div>
+        <scramble-text trigger="hover,click">Hover O Click</scramble-text>
+        <div class="code-example">
+            &lt;scramble-text trigger="hover,click"&gt;Hover O Click&lt;/scramble-text&gt;
+        </div>
+    </div>
+
+    <div class="example-section">
+        <div class="example-title">5. Configuración personalizada</div>
+        <scramble-text trigger="hover" solve-time="1500" character-time="80" delay-time="100" class="large-text">
+            EFECTO LENTO
+        </scramble-text>
+        <div class="code-example">
+            &lt;scramble-text
+            trigger="hover"
+            solve-time="1200"
+            character-time="80"
+            delay-time="100"
+            class="large-text"&gt;
+            EFECTO LENTO
+            &lt;/scramble-text&gt;
+        </div>
+    </div>
+
+    <div class="example-section">
+        <div class="example-title">6. Caracteres personalizados</div>
+        <scramble-text trigger="hover" characters="\/">
+            SÍMBOLOS ESPECIALES
+        </scramble-text>
+        <div class="code-example">
+            &lt;scramble-text
+            trigger="hover"
+            characters="\/"
+            class="neon-text"&gt;
+            SÍMBOLOS ESPECIALES
+            &lt;/scramble-text&gt;
+        </div>
+    </div>
+
+    <div class="example-section">
+        <div class="example-title">7. Efecto rápido</div>
+        <scramble-text trigger="click" solve-time="300" character-time="20" delay-time="25">
+            SÚPER RÁPIDO
+        </scramble-text>
+        <div class="code-example">
+            &lt;scramble-text
+            trigger="hover"
+            solve-time="300"
+            character-time="20"
+            delay-time="25"&gt;
+            SÚPER RÁPIDO
+            &lt;/scramble-text&gt;
+        </div>
+    </div>
+
+    <div class="example-section">
+        <div class="example-title">8. Control programático</div>
+        <scramble-text id="programatic-example" trigger="">Control Manual</scramble-text>
+        <button onclick="document.getElementById('programatic-example').scramble()">
+            Activar Efecto
+        </button>
+        <div class="code-example">
+            &lt;scramble-text id="example" trigger=""&gt;Control Manual&lt;/scramble-text&gt;
+            &lt;button onclick="document.getElementById('example').scramble()"&gt;
+            Activar Efecto
+            &lt;/button&gt;
+        </div>
+    </div>
+
+    <script type="module" src="./dist/index.js"></script>
+</body>
+
+</html>

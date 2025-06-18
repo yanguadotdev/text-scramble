@@ -1,0 +1,43 @@
+{
+  "name": "scramble-text",
+  "version": "1.0.0",
+  "description": "Web component that animates text with a scramble effect",
+  "keywords": [
+    "web-component",
+    "scramble-text",
+    "text-animation",
+    "vanilla-js",
+    "custom-element",
+    "frontend",
+    "typescript"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:yanguadotdev/scramble-text.git"
+  },
+  "homepage": "git@github.com:yanguadotdev/scramble-text#readme",
+  "bugs": {
+    "url": "git@github.com:yanguadotdev/scramble-text/issues"
+  },
+  "author": "Yangua Samir",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}

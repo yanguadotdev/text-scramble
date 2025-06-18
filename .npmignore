@@ -1,0 +1,22 @@
+# Excluir archivos de desarrollo
+src/
+*.ts
+*.tsx
+*.map
+
+# Configuración y metadatos
+tsconfig.json
+.npmignore
+.gitignore
+.vscode/
+*.log
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Ejemplos y documentación local
+examples/
+demo/
+test/
+*.html
