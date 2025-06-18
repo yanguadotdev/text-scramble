@@ -29,11 +29,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:yanguadotdev/scramble-text.git"
+    "url": "https://github.com/yanguadotdev/scramble-text"
   },
-  "homepage": "git@github.com:yanguadotdev/scramble-text#readme",
+  "homepage": "https://github.com/yanguadotdev/scramble-text#readme",
   "bugs": {
-    "url": "git@github.com:yanguadotdev/scramble-text/issues"
+    "url": "https://github.com/yanguadotdev/scramble-text/issues"
   },
   "author": "Yangua Samir",
   "license": "MIT",
