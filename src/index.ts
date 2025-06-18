@@ -1,4 +1,4 @@
-interface ScrambleTextConfig {
+interface TextScrambleConfig {
   solveTime: number;
   characterTime: number;
   delayTime: number;
@@ -6,8 +6,8 @@ interface ScrambleTextConfig {
   triggers: string[];
 }
 
-class ScrambleText extends HTMLElement {
-  private config: ScrambleTextConfig;
+class TextScramble extends HTMLElement {
+  private config: TextScrambleConfig;
   private isActive: boolean = false;
   private observer: IntersectionObserver | null = null;
   private originalText: string = '';
@@ -45,7 +45,7 @@ class ScrambleText extends HTMLElement {
     }
   }
 
-  private getConfigFromAttributes(): ScrambleTextConfig {
+  private getConfigFromAttributes(): TextScrambleConfig {
     const triggers = this.getAttribute('trigger')?.split(',').map(t => t.trim()) || ['hover'];
 
     return {
@@ -83,7 +83,7 @@ class ScrambleText extends HTMLElement {
         (entries) => {
           entries.forEach(entry => {
             if (entry.isIntersecting && !this.isActive) {
-              this.scrambleText();
+              this.textScramble();
             }
           });
         },
@@ -107,10 +107,10 @@ class ScrambleText extends HTMLElement {
 
   private handleScramble = (event: Event): void => {
     event.preventDefault();
-    this.scrambleText();
+    this.textScramble();
   }
 
-  private scrambleText(): void {
+  private textScramble(): void {
     if (this.isActive) return;
 
     let delay = 0;
@@ -168,13 +168,13 @@ class ScrambleText extends HTMLElement {
 
   // Método público para activar el efecto programáticamente
   public scramble(): void {
-    this.scrambleText();
+    this.textScramble();
   }
 }
 
 // Registrar el web component
-if (!customElements.get('scramble-text')) {
-  customElements.define('scramble-text', ScrambleText);
+if (!customElements.get('text-scramble')) {
+  customElements.define('text-scramble', TextScramble);
 }
 
-export default ScrambleText;
+export default TextScramble;

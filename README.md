@@ -35,20 +35,20 @@ require('text-scramble');
 
 ```html
 <!-- Uso básico -->
-<scramble-text>Hola Mundo</scramble-text>
+<text-scramble>Hola Mundo</text-scramble>
 
 <!-- Con trigger personalizado -->
-<scramble-text trigger="click">Haz click aquí</scramble-text>
+<text-scramble trigger="click">Haz click aquí</text-scramble>
 
 <!-- Configuración completa -->
-<scramble-text 
+<text-scramble 
     trigger="hover,viewport" 
     solve-time="1000" 
     character-time="60" 
     delay-time="80"
     characters="01★☆">
     EFECTO PERSONALIZADO
-</scramble-text>
+</text-scramble>
 ```
 
 ## 🎛️ Atributos de Configuración
@@ -74,48 +74,48 @@ require('text-scramble');
 
 ### Efecto Matriz (Película)
 ```html
-<scramble-text 
+<text-scramble 
     trigger="viewport" 
     characters="01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン"
     solve-time="1200"
     character-time="80">
     DIGITAL RAIN
-</scramble-text>
+</text-scramble>
 ```
 
 ### Efecto Hacker
 ```html
-<scramble-text 
+<text-scramble 
     trigger="hover" 
     characters="01"
     solve-time="600"
     character-time="30"
     delay-time="20">
     ACCESO CONCEDIDO
-</scramble-text>
+</text-scramble>
 ```
 
 ### Efecto Glitch
 ```html
-<scramble-text 
+<text-scramble 
     trigger="click" 
     characters="!@#$%^&*()_+-=[]{}|;:,.<>?"
     solve-time="400"
     character-time="20">
     SISTEMA CORRUPTO
-</scramble-text>
+</text-scramble>
 ```
 
 ### Efecto Suave
 ```html
-<scramble-text 
+<text-scramble 
     trigger="viewport" 
     characters="abcdefghijklmnopqrstuvwxyz"
     solve-time="1000"
     character-time="60"
     delay-time="100">
     transición elegante
-</scramble-text>
+</text-scramble>
 ```
 
 ## 🔧 API JavaScript
@@ -125,16 +125,16 @@ require('text-scramble');
 Puedes activar el efecto programáticamente:
 
 ```javascript
-const element = document.querySelector('scramble-text');
+const element = document.querySelector('text-scramble');
 element.scramble();
 ```
 
 ### Ejemplo de Control Programático
 
 ```html
-<scramble-text id="manual-control" trigger="">
+<text-scramble id="manual-control" trigger="">
     Control Manual
-</scramble-text>
+</text-scramble>
 
 <button onclick="document.getElementById('manual-control').scramble()">
     Activar Efecto
@@ -145,38 +145,38 @@ element.scramble();
 
 ### Landing Pages
 ```html
-<scramble-text trigger="viewport" class="hero-title">
+<text-scramble trigger="viewport" class="hero-title">
     BIENVENIDO AL FUTURO
-</scramble-text>
+</text-scramble>
 ```
 
 ### Botones Interactivos
 ```html
-<scramble-text 
+<text-scramble 
     trigger="hover" 
     solve-time="300" 
     class="btn btn-primary">
     DESCARGAR AHORA
-</scramble-text>
+</text-scramble>
 ```
 
 ### Navegación
 ```html
 <nav>
-    <scramble-text trigger="hover">Inicio</scramble-text>
-    <scramble-text trigger="hover">Servicios</scramble-text>
-    <scramble-text trigger="hover">Contacto</scramble-text>
+    <text-scramble trigger="hover">Inicio</text-scramble>
+    <text-scramble trigger="hover">Servicios</text-scramble>
+    <text-scramble trigger="hover">Contacto</text-scramble>
 </nav>
 ```
 
 ### Formularios
 ```html
-<scramble-text 
+<text-scramble 
     trigger="focus" 
     solve-time="200" 
     character-time="20">
     Tu Nombre
-</scramble-text>
+</text-scramble>
 ```
 
 ## 🎨 Estilos CSS
@@ -185,7 +185,7 @@ El componente **no usa Shadow DOM**, por lo que puedes aplicar estilos CSS norma
 
 ```css
 /* Estilos básicos */
-scramble-text {
+text-scramble {
     font-family: 'Courier New', monospace;
     color: #00ff00;
     cursor: pointer;
@@ -193,18 +193,18 @@ scramble-text {
 }
 
 /* Durante el efecto scramble */
-scramble-text.scrambling {
+text-scramble.scrambling {
     color: #ffff00;
     text-shadow: 0 0 10px currentColor;
 }
 
 /* Estados hover */
-scramble-text:hover {
+text-scramble:hover {
     background: rgba(0, 255, 0, 0.1);
 }
 
 /* Tema cyberpunk */
-.cyberpunk scramble-text {
+.cyberpunk text-scramble {
     color: #ff006f;
     font-weight: bold;
     text-transform: uppercase;
@@ -212,7 +212,7 @@ scramble-text:hover {
 }
 
 /* Tema matriz */
-.matrix scramble-text {
+.matrix text-scramble {
     color: #00ff41;
     background: #000;
     font-family: 'Courier New', monospace;
@@ -224,7 +224,7 @@ scramble-text:hover {
 Los atributos se pueden cambiar dinámicamente:
 
 ```javascript
-const element = document.querySelector('scramble-text');
+const element = document.querySelector('text-scramble');
 
 // Cambiar trigger
 element.setAttribute('trigger', 'click');
@@ -256,13 +256,13 @@ element.setAttribute('characters', '★☆♦♠♣♥');
 ```css
 /* Adapta el efecto a diferentes tamaños */
 @media (max-width: 768px) {
-    scramble-text {
+    text-scramble {
         font-size: 0.9rem;
     }
 }
 
 @media (max-width: 480px) {
-    scramble-text {
+    text-scramble {
         font-size: 0.8rem;
         letter-spacing: 1px;
     }
