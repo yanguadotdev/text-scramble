@@ -19,6 +19,12 @@ Un elegante web component que crea efectos de texto "scramble" o "matriz" con co
 npm install text-scramble
 ```
 
+o Via CDN
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/text-scramble@latest/dist/index.js"></script>
+```
+
 ## 📖 Uso Básico
 
 ### Importación
