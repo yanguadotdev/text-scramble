@@ -1,6 +1,6 @@
 {
   "name": "text-scramble",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Web component that animates text with a scramble effect",
   "keywords": [
     "web-component",
